@@ -1,0 +1,23 @@
+table {
+    table-layout: fixed !important; /* Cố định kích thước cột */
+    width: 100% !important; /* Bảng chiếm toàn bộ chiều rộng container */
+}
+
+th, td {
+    white-space: normal !important; /* Cho phép xuống dòng nếu cần */
+    word-wrap: break-word !important; /* Ngắt chữ khi quá dài */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 8px; /* Giảm padding để tiết kiệm không gian */
+    font-size: 14px; /* Điều chỉnh kích thước chữ để vừa bảng */
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1 1 300px; /* Đảm bảo mỗi card có kích thước tối thiểu */
+    max-width: 100%;
+}

@@ -1,0 +1,19 @@
+<div class="flex flex-col flex-auto min-w-0">
+
+    <!-- Main -->
+    <div class="flex-auto p-6 sm:p-10">
+
+        <!-- CONTENT GOES HERE -->
+        <div class="h-400 min-h-400 max-h-400 border-2 border-dashed border-gray-300 rounded-2xl">
+            <div>
+                <input [(ngModel)]="userMessage" placeholder="Nhập tin nhắn..." />
+                <button (click)="sendMessage()">Gửi</button>
+              </div>
+              <div *ngFor="let msg of messages">
+                <p>{{ msg }}</p>
+              </div>
+        </div>
+
+    </div>
+
+</div>

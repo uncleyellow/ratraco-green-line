@@ -1,0 +1,101 @@
+<div class="p-4 bg-white shadow-md rounded-lg">
+    <!-- Thanh tìm kiếm -->
+    <!-- <div class="flex items-center justify-between mb-4">
+      <mat-form-field class="w-1/3">
+        <mat-label>Tìm kiếm</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Nhập từ khóa..." />
+      </mat-form-field>
+    </div> -->
+  
+    <!-- Bảng dữ liệu -->
+    <div class="overflow-x-auto w-full">
+        <table mat-table [dataSource]="dataSource" matSort class="w-full table-fixed border border-gray-300">
+          
+          <!-- Header chính -->
+          <tr mat-header-row *matHeaderRowDef="mainHeaders"></tr>
+          <tr mat-header-row *matHeaderRowDef="subHeaders"></tr>
+      
+          <!-- STT -->
+          <!-- <ng-container matColumnDef="stt" >
+            <th mat-header-cell *matHeaderCellDef rowspan="2" class="bg-gray-200 text-center px-2 py-2 whitespace-nowrap" mat-sort-header>STT</th>
+            <td mat-cell *matCellDef="let element; let i = index" class="text-center px-4">{{ i + 1 + (paginator.pageIndex * paginator.pageSize) }}</td>
+          </ng-container> -->
+      
+          <!-- Số Cont -->
+          <!-- <ng-container matColumnDef="SOCONT">
+            <th mat-header-cell *matHeaderCellDef rowspan="2" class="bg-gray-200 text-center px-2 py-2 whitespace-nowrap" mat-sort-header>Số Cont</th>
+            <td mat-cell *matCellDef="let element" class="px-4">{{ element.SOCONT }}</td>
+          </ng-container> -->
+      
+          <!-- Loại -->
+          <!-- <ng-container matColumnDef="Loai">
+            <th mat-header-cell *matHeaderCellDef rowspan="2" class="bg-gray-200 text-center px-4" mat-sort-header>Loại</th>
+            <td mat-cell *matCellDef="let element" class="px-4">{{ element.Loai }}</td>
+          </ng-container> -->
+      
+          <!-- Quốc tịch -->
+          <!-- <ng-container matColumnDef="QuocTich">
+            <th mat-header-cell *matHeaderCellDef rowspan="2" class="bg-gray-200 text-center px-4" mat-sort-header>Quốc tịch</th>
+            <td mat-cell *matCellDef="let element" class="px-4">{{ element.QuocTich }}</td>
+          </ng-container> -->
+      
+          <!-- Kích thước -->
+          <ng-container matColumnDef="KichThuoc">
+            <th mat-header-cell *matHeaderCellDef colspan="3" class="bg-gray-200 text-center px-2 py-2 whitespace-nowrap" >Kích thước</th>
+          </ng-container>
+      
+          <!-- Dài -->
+          <ng-container matColumnDef="Dai">
+            <th mat-header-cell *matHeaderCellDef class="bg-gray-200 text-center px-2 py-2 whitespace-nowrap" mat-sort-header>Dài (mm)</th>
+            <td mat-cell *matCellDef="let element" class="px-4">{{ element.Dai }}</td>
+          </ng-container>
+      
+          <!-- Rộng -->
+          <ng-container matColumnDef="Rong">
+            <th mat-header-cell *matHeaderCellDef class="bbg-gray-200 text-center px-2 py-2 whitespace-nowrap" mat-sort-header>Rộng (mm)</th>
+            <td mat-cell *matCellDef="let element" class="px-4">{{ element.Rong }}</td>
+          </ng-container>
+      
+          <!-- Cao -->
+          <ng-container matColumnDef="Cao">
+            <th mat-header-cell *matHeaderCellDef class="bg-gray-200 text-center px-2 py-2 whitespace-nowrap" mat-sort-header>Cao (mm)</th>
+            <td mat-cell *matCellDef="let element" class="px-4">{{ element.Cao }}</td>
+          </ng-container>
+      
+<!-- Trạng thái -->
+<!-- <ng-container matColumnDef="TrangThai">
+    <th mat-header-cell *matHeaderCellDef rowspan="2" class="bg-gray-200 text-center px-4" mat-sort-header>Trạng thái</th>
+    <td mat-cell *matCellDef="let element" class="text-center px-4">
+      <span [ngClass]="{'text-green-500': element.IsActive, 'text-red-500': !element.IsActive}">
+        {{ element.IsActive ? 'Hoạt động' : 'Không hoạt động' }}
+      </span>
+    </td>
+  </ng-container> -->
+  
+      <!-- Cột Hành động -->
+<!-- <ng-container matColumnDef="HanhDong">
+    <th mat-header-cell *matHeaderCellDef rowspan="2" class="bg-gray-200 text-center px-4">Hành động</th>
+    <td mat-cell *matCellDef="let element" class="text-center px-4">
+      <button mat-icon-button color="primary" (click)="editItem(element)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="deleteItem(element)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button color="accent" (click)="deleteItem(element)">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </td>
+  </ng-container> -->
+  
+          <!-- Dữ liệu -->
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+      
+  
+    <!-- Phân trang -->
+    <mat-paginator style="display: none;" #paginator [length]="item.total" [pageSize]="item.limit" [pageSizeOptions]="[5, 10, 25, 50]">
+    </mat-paginator>
+  </div>
+  
