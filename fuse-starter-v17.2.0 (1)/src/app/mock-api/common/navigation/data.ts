@@ -4,14 +4,14 @@ import { FuseNavigationItem } from '@fuse/components/navigation';
 export const defaultNavigation: FuseNavigationItem[] = [
     {
         id      : 'apps',
-        title   : 'Applications',
-        subtitle: 'Custom made application designs',
+        title   : 'Trang chủ',
+        subtitle: '',
         type    : 'group',
         icon    : 'heroicons_outline:home',
         children: [
             {
                 id   : 'dash-board',
-                title: 'Dash Board',
+                title: 'Trang chủ',
                 type : 'basic',
                 icon : 'heroicons_outline:presentation-chart-bar',
                 link : '/apps/dash-board'
@@ -19,7 +19,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
         
             {
                 id   : 'reports',
-                title: 'Báo cáo',
+                title: 'Dịch vụ',
                 type : 'basic',
                 icon : 'heroicons_outline:chart-pie',
                 link : '/apps/reports'
@@ -28,17 +28,18 @@ export const defaultNavigation: FuseNavigationItem[] = [
             
         ]
     },
+    
     {
         id      : 'user-interface',
-        title   : 'User Interface',
-        subtitle: 'Building blocks of the UI & UX',
+        title   : 'Thông tin',
+        subtitle: '(Phương tiện , Kho bãi ga , Lịch , Tin Tức ...)',
         type    : 'group',
         icon    : 'heroicons_outline:collection',
         children: [
 
             {
                 id   : 'user-interface.cards',
-                title: 'Cards',
+                title: 'Phương tiện',
                 type : 'basic',
                 icon : 'heroicons_outline:duplicate',
                 link : '/ui/cards'
@@ -46,7 +47,7 @@ export const defaultNavigation: FuseNavigationItem[] = [
 
             {
                 id      : 'user-interface.forms',
-                title   : 'Forms',
+                title   : 'Kho bãi ga',
                 type    : 'collapsable',
                 icon    : 'heroicons_outline:pencil-alt',
                 children: [
@@ -73,19 +74,55 @@ export const defaultNavigation: FuseNavigationItem[] = [
    
 
         ]
+    },
+
+    {
+        id      : 'news',
+        title   : 'Tin Tức',
+        subtitle: '',
+        type    : 'group',
+        icon    : 'heroicons_outline:home',
+        children: [
+            {
+                id   : 'dash-board',
+                title: 'Tuyển dụng',
+                type : 'basic',
+                icon : 'heroicons_outline:presentation-chart-bar',
+                link : '/apps/dash-board'
+            },
+        
+            {
+                id   : 'reports',
+                title: 'Về công ty',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/apps/reports'
+            },
+
+            
+        ]
+    },
+
+    {
+        id      : 'contact',
+        title   : 'Liên hệ',
+        subtitle: '',
+        type    : 'basic',
+        icon    : 'heroicons_outline:home',
+        link : '/apps/dash-board'
     },
 ];
 export const compactNavigation: FuseNavigationItem[] = [
     {
         id      : 'apps',
-        title   : 'Applications',
-        subtitle: 'Custom made application designs',
+        title   : 'Trang chủ',
+        subtitle: '',
         type    : 'group',
         icon    : 'heroicons_outline:home',
         children: [
             {
                 id   : 'dash-board',
-                title: 'Dash Board',
+                title: 'Trang chủ',
                 type : 'basic',
                 icon : 'heroicons_outline:presentation-chart-bar',
                 link : '/apps/dash-board'
@@ -93,24 +130,27 @@ export const compactNavigation: FuseNavigationItem[] = [
         
             {
                 id   : 'reports',
-                title: 'Báo cáo',
+                title: 'Dịch vụ',
                 type : 'basic',
                 icon : 'heroicons_outline:chart-pie',
                 link : '/apps/reports'
             },
+
+            
         ]
     },
+    
     {
         id      : 'user-interface',
-        title   : 'User Interface',
-        subtitle: 'Building blocks of the UI & UX',
+        title   : 'Thông tin',
+        subtitle: '(Phương tiện , Kho bãi ga , Lịch , Tin Tức ...)',
         type    : 'group',
         icon    : 'heroicons_outline:collection',
         children: [
 
             {
                 id   : 'user-interface.cards',
-                title: 'Cards',
+                title: 'Phương tiện',
                 type : 'basic',
                 icon : 'heroicons_outline:duplicate',
                 link : '/ui/cards'
@@ -118,7 +158,7 @@ export const compactNavigation: FuseNavigationItem[] = [
 
             {
                 id      : 'user-interface.forms',
-                title   : 'Forms',
+                title   : 'Kho bãi ga',
                 type    : 'collapsable',
                 icon    : 'heroicons_outline:pencil-alt',
                 children: [
@@ -145,19 +185,55 @@ export const compactNavigation: FuseNavigationItem[] = [
    
 
         ]
+    },
+
+    {
+        id      : 'news',
+        title   : 'Tin Tức',
+        subtitle: '',
+        type    : 'group',
+        icon    : 'heroicons_outline:home',
+        children: [
+            {
+                id   : 'dash-board',
+                title: 'Tuyển dụng',
+                type : 'basic',
+                icon : 'heroicons_outline:presentation-chart-bar',
+                link : '/apps/dash-board'
+            },
+        
+            {
+                id   : 'reports',
+                title: 'Về công ty',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/apps/reports'
+            },
+
+            
+        ]
+    },
+
+    {
+        id      : 'contact',
+        title   : 'Liên hệ',
+        subtitle: '',
+        type    : 'basic',
+        icon    : 'heroicons_outline:home',
+        link : '/apps/dash-board'
     },
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
     {
         id      : 'apps',
-        title   : 'Applications',
-        subtitle: 'Custom made application designs',
+        title   : 'Trang chủ',
+        subtitle: '',
         type    : 'group',
         icon    : 'heroicons_outline:home',
         children: [
             {
                 id   : 'dash-board',
-                title: 'Dash Board',
+                title: 'Trang chủ',
                 type : 'basic',
                 icon : 'heroicons_outline:presentation-chart-bar',
                 link : '/apps/dash-board'
@@ -165,24 +241,27 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         
             {
                 id   : 'reports',
-                title: 'Báo cáo',
+                title: 'Dịch vụ',
                 type : 'basic',
                 icon : 'heroicons_outline:chart-pie',
                 link : '/apps/reports'
             },
+
+            
         ]
     },
+    
     {
         id      : 'user-interface',
-        title   : 'User Interface',
-        subtitle: 'Building blocks of the UI & UX',
+        title   : 'Thông tin',
+        subtitle: '(Phương tiện , Kho bãi ga , Lịch , Tin Tức ...)',
         type    : 'group',
         icon    : 'heroicons_outline:collection',
         children: [
 
             {
                 id   : 'user-interface.cards',
-                title: 'Cards',
+                title: 'Phương tiện',
                 type : 'basic',
                 icon : 'heroicons_outline:duplicate',
                 link : '/ui/cards'
@@ -190,7 +269,7 @@ export const futuristicNavigation: FuseNavigationItem[] = [
 
             {
                 id      : 'user-interface.forms',
-                title   : 'Forms',
+                title   : 'Kho bãi ga',
                 type    : 'collapsable',
                 icon    : 'heroicons_outline:pencil-alt',
                 children: [
@@ -217,19 +296,55 @@ export const futuristicNavigation: FuseNavigationItem[] = [
    
 
         ]
+    },
+
+    {
+        id      : 'news',
+        title   : 'Tin Tức',
+        subtitle: '',
+        type    : 'group',
+        icon    : 'heroicons_outline:home',
+        children: [
+            {
+                id   : 'dash-board',
+                title: 'Tuyển dụng',
+                type : 'basic',
+                icon : 'heroicons_outline:presentation-chart-bar',
+                link : '/apps/dash-board'
+            },
+        
+            {
+                id   : 'reports',
+                title: 'Về công ty',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/apps/reports'
+            },
+
+            
+        ]
+    },
+
+    {
+        id      : 'contact',
+        title   : 'Liên hệ',
+        subtitle: '',
+        type    : 'basic',
+        icon    : 'heroicons_outline:home',
+        link : '/apps/dash-board'
     },
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
     {
         id      : 'apps',
-        title   : 'Applications',
-        subtitle: 'Custom made application designs',
+        title   : 'Trang chủ',
+        subtitle: '',
         type    : 'group',
         icon    : 'heroicons_outline:home',
         children: [
             {
                 id   : 'dash-board',
-                title: 'Dash Board',
+                title: 'Trang chủ',
                 type : 'basic',
                 icon : 'heroicons_outline:presentation-chart-bar',
                 link : '/apps/dash-board'
@@ -237,24 +352,27 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         
             {
                 id   : 'reports',
-                title: 'Báo cáo',
+                title: 'Dịch vụ',
                 type : 'basic',
                 icon : 'heroicons_outline:chart-pie',
                 link : '/apps/reports'
             },
+
+            
         ]
     },
+    
     {
         id      : 'user-interface',
-        title   : 'User Interface',
-        subtitle: 'Building blocks of the UI & UX',
+        title   : 'Thông tin',
+        subtitle: '(Phương tiện , Kho bãi ga , Lịch , Tin Tức ...)',
         type    : 'group',
         icon    : 'heroicons_outline:collection',
         children: [
 
             {
                 id   : 'user-interface.cards',
-                title: 'Cards',
+                title: 'Phương tiện',
                 type : 'basic',
                 icon : 'heroicons_outline:duplicate',
                 link : '/ui/cards'
@@ -262,7 +380,7 @@ export const horizontalNavigation: FuseNavigationItem[] = [
 
             {
                 id      : 'user-interface.forms',
-                title   : 'Forms',
+                title   : 'Kho bãi ga',
                 type    : 'collapsable',
                 icon    : 'heroicons_outline:pencil-alt',
                 children: [
@@ -289,5 +407,41 @@ export const horizontalNavigation: FuseNavigationItem[] = [
    
 
         ]
+    },
+
+    {
+        id      : 'news',
+        title   : 'Tin Tức',
+        subtitle: '',
+        type    : 'group',
+        icon    : 'heroicons_outline:home',
+        children: [
+            {
+                id   : 'dash-board',
+                title: 'Tuyển dụng',
+                type : 'basic',
+                icon : 'heroicons_outline:presentation-chart-bar',
+                link : '/apps/dash-board'
+            },
+        
+            {
+                id   : 'reports',
+                title: 'Về công ty',
+                type : 'basic',
+                icon : 'heroicons_outline:chart-pie',
+                link : '/apps/reports'
+            },
+
+            
+        ]
+    },
+
+    {
+        id      : 'contact',
+        title   : 'Liên hệ',
+        subtitle: '',
+        type    : 'basic',
+        icon    : 'heroicons_outline:home',
+        link : '/apps/dash-board'
     },
 ];
