@@ -1,0 +1,25 @@
+<h2 mat-dialog-title class="text-green-600 font-bold flex items-center gap-2">
+    <mat-icon color="primary">contact_mail</mat-icon> Liên hệ với chúng tôi
+</h2>
+
+<mat-dialog-content class="space-y-4">
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Họ và tên</mat-label>
+        <input matInput placeholder="Nhập họ tên của bạn">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Nhập email của bạn">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-full">
+        <mat-label>Nội dung</mat-label>
+        <textarea matInput rows="4" placeholder="Nhập nội dung tin nhắn"></textarea>
+    </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onCancel()">Hủy</button>
+    <button mat-raised-button color="primary" (click)="onSubmit()">Gửi</button>
+</mat-dialog-actions>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ContactUsFormComponent } from '../contact-us-form/contact-us-form.component';
 
 @Component({
   selector: 'app-hire',
@@ -6,7 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./hire.component.scss']
 })
 export class HireComponent {
-  dowloadFile() {
+  constructor(
+    private dialog: MatDialog
+  ){
+    
+  }
+  downloadFile() {
     const fileUrl = 'assets/green-line/Hosoungvienform.doc'; // Đường dẫn file
     const fileName = 'Hosoungvienform.doc'; // Tên file khi tải về
   
@@ -18,5 +25,11 @@ export class HireComponent {
     document.body.removeChild(anchor);
   }
   
-  
+  contactUs(){
+    this.dialog.open(ContactUsFormComponent, {
+      data: { id: 1, name: "Nguyễn Văn A" },
+      width: '400px',
+      disableClose: true
+    });
+  }
 }

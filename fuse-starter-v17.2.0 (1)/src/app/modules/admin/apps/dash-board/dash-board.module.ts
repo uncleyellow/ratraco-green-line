@@ -10,6 +10,7 @@ import { HireComponent } from './hire/hire.component';
 import { ContactComponent } from './contact/contact.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { ContactUsFormComponent } from './contact-us-form/contact-us-form.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     HireComponent,
     ContactComponent,
     IntroduceComponent,
+    ContactUsFormComponent,
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,6 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     NgApexchartsModule, // Thêm module này vào
     
 
-  ]
+  ],
 })
 export class DashBoardModule { }

@@ -8,9 +8,16 @@
         <p class="text-gray-600 mt-2">
             Join our team and become part of a group dedicated to delivering exceptional value and care to our clients.
         </p>
-        <button (click)="dowloadFile()" mat-raised-button class="mt-4 bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
-            Apply Now
-        </button>
+        <div class="flex gap-4 mt-4">
+            <button (click)="downloadFile()" mat-raised-button class="apply-btn px-6 py-2 rounded-lg bg-green-500">
+                Apply Now
+            </button>
+            <button (click)="contactUs()" mat-raised-button class="contact-btn px-6 py-2 rounded-lg">
+                Contact Us
+            </button>
+        </div>
+        
+        
         
         <div class="flex mt-6 space-x-6">
             <div>
