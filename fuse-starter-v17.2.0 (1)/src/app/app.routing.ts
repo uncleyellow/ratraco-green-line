@@ -19,6 +19,18 @@ export const appRoutes: Route[] = [
     // location. This is a small convenience to keep all main routes together here on this file.
     {path: 'signed-in-redirect', pathMatch : 'full', redirectTo: 'apps/dash-board'},
 
+    // **Cần thiết cho GitHub Pages** (bổ sung đường dẫn con `/ratraco-green-line`)
+    {path: 'ratraco-green-line', pathMatch : 'full', redirectTo: 'apps/dash-board'},
+
+    // **Cần thiết cho GitHub Pages** (để hỗ trợ điều hướng trên subpath)
+    {
+        path: 'ratraco-green-line',
+        children: [
+            {path: '', pathMatch: 'full', redirectTo: 'apps/dash-board'},
+            {path: 'apps/dash-board', loadChildren: () => import('app/modules/admin/apps/dash-board/dash-board.module').then(m => m.DashBoardModule)}
+        ]
+    },
+
     // Auth routes for guests
     {
         path: '',
