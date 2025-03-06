@@ -75,20 +75,9 @@ export const appRoutes: Route[] = [
         {
             path: 'apps', children:[
                 {path: 'dash-board', loadChildren: () => import('app/modules/admin/apps/dash-board/dash-board.module').then(m => m.DashBoardModule)},
-                {path: 'reports', loadChildren: () => import('app/modules/admin/apps/reports/reports.module').then(m => m.ReportsModule)},
             ]
         },
-        {path: 'ui', children: [
-             // Cards
-            {path: 'cards', loadChildren: () => import('app/modules/admin/apps/ui/cards/cards.module').then(m => m.CardsModule)},
 
-            // Forms
-            {path: 'forms', children: [
-                {path: 'fields', loadChildren: () => import('app/modules/admin/apps/ui/forms/fields/fields.module').then(m => m.FormsFieldsModule)},
-                {path: 'layouts', loadChildren: () => import('app/modules/admin/apps/ui/forms/layouts/layouts.module').then(m => m.FormsLayoutsModule)},
-                {path: 'wizards', loadChildren: () => import('app/modules/admin/apps/ui/forms/wizards/wizards.module').then(m => m.FormsWizardsModule)}
-            ]},
-        ]},
         ]
     }
 
