@@ -25,17 +25,17 @@ export class ServicesComponent {
     {
       title: 'Đại lý vận tải hàng hoá',
       description: 'Expert handling of oversized, overweight, and delicate shipments.',
-      img: 'assets/green-line/Overview/Cont.png'
+      img: 'assets/green-line/Overview/Train.bmp'
     },
     {
       title: 'Giải pháp thân thiện',
       description: 'Secure storage with inventory management and cross-docking at strategic locations.',
-      img: 'assets/green-line/Overview/Cont.png'
+      img: 'assets/green-line/Overview/Train2.bmp'
     },
     {
       title: 'Giảm thiểu khí thải',
       description: 'Safe transport for sensitive goods with advanced refrigeration and monitoring.',
-      img: 'assets/green-line/Overview/Cont.png'
+      img: 'assets/green-line/Overview/Train3.png'
     }
   ];
 }

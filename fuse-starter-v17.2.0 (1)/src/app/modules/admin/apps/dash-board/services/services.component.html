@@ -7,7 +7,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         <div *ngFor="let service of services" class="bg-white p-6 rounded-lg shadow-md">
-            <img [src]="service.img" class="rounded-md w-full" alt="{{ service.title }}">
+            <img [src]="service.img" class="rounded-md w-full h-40" alt="{{ service.title }}">
             <h3 class="text-lg font-bold mt-4">{{ service.title }}</h3>
             <p class="text-gray-600 mt-2">{{ service.description }}</p>
         </div>
