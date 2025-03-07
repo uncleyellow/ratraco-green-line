@@ -1,6 +1,8 @@
 /* tslint:disable:max-line-length */
 import { FuseNavigationItem } from '@fuse/components/navigation';
 
+
+
 export const defaultNavigation: FuseNavigationItem[] = [
     // {
     //     id      : 'apps',
@@ -104,237 +106,233 @@ export const defaultNavigation: FuseNavigationItem[] = [
     // },
 
     {
-        id      : 'phone',
-        title   : '012345678910',
+        id: 'phone',
+        title: '012345678910',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:phone', // Giữ nguyên
+        type: 'basic',
+        icon: 'heroicons_outline:phone',
     },
     {
-        id      : 'welcome',
-        title   : 'Giới thiệu',
+        id: 'welcome',
+        title: 'welcome', // Để nguyên key, dịch sau
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:user-group', // Icon nhóm người, phù hợp cho phần giới thiệu
-        link    : '/apps/dash-board'
+        type: 'basic',
+        icon: 'heroicons_outline:user-group',
+        link: '/apps/dash-board'
     },
     {
-        id      : 'services',
-        title   : 'Dịch Vụ',
+        id: 'services',
+        title: 'services',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:cog', // Icon bánh răng, phù hợp cho dịch vụ
-        link    : '/apps/dash-board/services'
+        type: 'basic',
+        icon: 'heroicons_outline:cog',
+        link: '/apps/dash-board/services'
     },
     {
-        id      : 'solutions',
-        title   : 'Giải pháp',
+        id: 'solutions',
+        title: 'solutions',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:light-bulb', // Icon bóng đèn, thể hiện ý tưởng & giải pháp
-        link    : '/apps/dash-board/solutions'
+        type: 'basic',
+        icon: 'heroicons_outline:light-bulb',
+        link: '/apps/dash-board/solutions'
     },
     {
-        id      : 'news',
-        title   : 'Tin Tức',
+        id: 'news',
+        title: 'news',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:newspaper', // Icon tờ báo, phù hợp cho tin tức
-        link    : '/apps/dash-board/news'
+        type: 'basic',
+        icon: 'heroicons_outline:newspaper',
+        link: '/apps/dash-board/news'
     },
     {
-        id      : 'hire',
-        title   : 'Tuyển dụng',
+        id: 'hire',
+        title: 'hire',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:briefcase', // Icon cặp hồ sơ, phù hợp cho tuyển dụng
-        link    : '/apps/dash-board/hire'
+        type: 'basic',
+        icon: 'heroicons_outline:briefcase',
+        link: '/apps/dash-board/hire'
     },
     {
-        id      : 'contact',
-        title   : 'Liên Hệ',
+        id: 'contact',
+        title: 'contact',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:chat', // Icon chat, phù hợp cho liên hệ
-        link    : '/apps/dash-board/contact'
+        type: 'basic',
+        icon: 'heroicons_outline:chat',
+        link: '/apps/dash-board/contact'
     }
     
 ];
 export const compactNavigation: FuseNavigationItem[] = [
-
     {
-        id      : 'phone',
-        title   : '012345678910',
+        id: 'phone',
+        title: '012345678910',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:phone', // Giữ nguyên
+        type: 'basic',
+        icon: 'heroicons_outline:phone',
     },
     {
-        id      : 'welcome',
-        title   : 'Giới thiệu',
+        id: 'welcome',
+        title: 'welcome', // Để nguyên key, dịch sau
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:user-group', // Icon nhóm người, phù hợp cho phần giới thiệu
-        link    : '/apps/dash-board'
+        type: 'basic',
+        icon: 'heroicons_outline:user-group',
+        link: '/apps/dash-board'
     },
     {
-        id      : 'services',
-        title   : 'Dịch Vụ',
+        id: 'services',
+        title: 'services',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:cog', // Icon bánh răng, phù hợp cho dịch vụ
-        link    : '/apps/dash-board/services'
+        type: 'basic',
+        icon: 'heroicons_outline:cog',
+        link: '/apps/dash-board/services'
     },
     {
-        id      : 'solutions',
-        title   : 'Giải pháp',
+        id: 'solutions',
+        title: 'solutions',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:light-bulb', // Icon bóng đèn, thể hiện ý tưởng & giải pháp
-        link    : '/apps/dash-board/solutions'
+        type: 'basic',
+        icon: 'heroicons_outline:light-bulb',
+        link: '/apps/dash-board/solutions'
     },
     {
-        id      : 'news',
-        title   : 'Tin Tức',
+        id: 'news',
+        title: 'news',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:newspaper', // Icon tờ báo, phù hợp cho tin tức
-        link    : '/apps/dash-board/news'
+        type: 'basic',
+        icon: 'heroicons_outline:newspaper',
+        link: '/apps/dash-board/news'
     },
     {
-        id      : 'hire',
-        title   : 'Tuyển dụng',
+        id: 'hire',
+        title: 'hire',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:briefcase', // Icon cặp hồ sơ, phù hợp cho tuyển dụng
-        link    : '/apps/dash-board/hire'
+        type: 'basic',
+        icon: 'heroicons_outline:briefcase',
+        link: '/apps/dash-board/hire'
     },
     {
-        id      : 'contact',
-        title   : 'Liên Hệ',
+        id: 'contact',
+        title: 'contact',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:chat', // Icon chat, phù hợp cho liên hệ
-        link    : '/apps/dash-board/contact'
+        type: 'basic',
+        icon: 'heroicons_outline:chat',
+        link: '/apps/dash-board/contact'
     }
+    
     
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
-
     {
-        id      : 'phone',
-        title   : '012345678910',
+        id: 'phone',
+        title: '012345678910',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:phone', // Giữ nguyên
+        type: 'basic',
+        icon: 'heroicons_outline:phone',
     },
     {
-        id      : 'welcome',
-        title   : 'Giới thiệu',
+        id: 'welcome',
+        title: 'welcome', // Để nguyên key, dịch sau
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:user-group', // Icon nhóm người, phù hợp cho phần giới thiệu
-        link    : '/apps/dash-board'
+        type: 'basic',
+        icon: 'heroicons_outline:user-group',
+        link: '/apps/dash-board'
     },
     {
-        id      : 'services',
-        title   : 'Dịch Vụ',
+        id: 'services',
+        title: 'services',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:cog', // Icon bánh răng, phù hợp cho dịch vụ
-        link    : '/apps/dash-board/services'
+        type: 'basic',
+        icon: 'heroicons_outline:cog',
+        link: '/apps/dash-board/services'
     },
     {
-        id      : 'solutions',
-        title   : 'Giải pháp',
+        id: 'solutions',
+        title: 'solutions',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:light-bulb', // Icon bóng đèn, thể hiện ý tưởng & giải pháp
-        link    : '/apps/dash-board/solutions'
+        type: 'basic',
+        icon: 'heroicons_outline:light-bulb',
+        link: '/apps/dash-board/solutions'
     },
     {
-        id      : 'news',
-        title   : 'Tin Tức',
+        id: 'news',
+        title: 'news',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:newspaper', // Icon tờ báo, phù hợp cho tin tức
-        link    : '/apps/dash-board/news'
+        type: 'basic',
+        icon: 'heroicons_outline:newspaper',
+        link: '/apps/dash-board/news'
     },
     {
-        id      : 'hire',
-        title   : 'Tuyển dụng',
+        id: 'hire',
+        title: 'hire',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:briefcase', // Icon cặp hồ sơ, phù hợp cho tuyển dụng
-        link    : '/apps/dash-board/hire'
+        type: 'basic',
+        icon: 'heroicons_outline:briefcase',
+        link: '/apps/dash-board/hire'
     },
     {
-        id      : 'contact',
-        title   : 'Liên Hệ',
+        id: 'contact',
+        title: 'contact',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:chat', // Icon chat, phù hợp cho liên hệ
-        link    : '/apps/dash-board/contact'
+        type: 'basic',
+        icon: 'heroicons_outline:chat',
+        link: '/apps/dash-board/contact'
     }
-    
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
-
-
     {
-        id      : 'phone',
-        title   : '012345678910',
+        id: 'phone',
+        title: '012345678910',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:phone', // Giữ nguyên
+        type: 'basic',
+        icon: 'heroicons_outline:phone',
     },
     {
-        id      : 'welcome',
-        title   : 'Giới thiệu',
+        id: 'welcome',
+        title: 'welcome', // Để nguyên key, dịch sau
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:user-group', // Icon nhóm người, phù hợp cho phần giới thiệu
-        link    : '/apps/dash-board'
+        type: 'basic',
+        icon: 'heroicons_outline:user-group',
+        link: '/apps/dash-board'
     },
     {
-        id      : 'services',
-        title   : 'Dịch Vụ',
+        id: 'services',
+        title: 'services',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:cog', // Icon bánh răng, phù hợp cho dịch vụ
-        link    : '/apps/dash-board/services'
+        type: 'basic',
+        icon: 'heroicons_outline:cog',
+        link: '/apps/dash-board/services'
     },
     {
-        id      : 'solutions',
-        title   : 'Giải pháp',
+        id: 'solutions',
+        title: 'solutions',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:light-bulb', // Icon bóng đèn, thể hiện ý tưởng & giải pháp
-        link    : '/apps/dash-board/solutions'
+        type: 'basic',
+        icon: 'heroicons_outline:light-bulb',
+        link: '/apps/dash-board/solutions'
     },
     {
-        id      : 'news',
-        title   : 'Tin Tức',
+        id: 'news',
+        title: 'news',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:newspaper', // Icon tờ báo, phù hợp cho tin tức
-        link    : '/apps/dash-board/news'
+        type: 'basic',
+        icon: 'heroicons_outline:newspaper',
+        link: '/apps/dash-board/news'
     },
     {
-        id      : 'hire',
-        title   : 'Tuyển dụng',
+        id: 'hire',
+        title: 'hire',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:briefcase', // Icon cặp hồ sơ, phù hợp cho tuyển dụng
-        link    : '/apps/dash-board/hire'
+        type: 'basic',
+        icon: 'heroicons_outline:briefcase',
+        link: '/apps/dash-board/hire'
     },
     {
-        id      : 'contact',
-        title   : 'Liên Hệ',
+        id: 'contact',
+        title: 'contact',
         subtitle: '',
-        type    : 'basic',
-        icon    : 'heroicons_outline:chat', // Icon chat, phù hợp cho liên hệ
-        link    : '/apps/dash-board/contact'
+        type: 'basic',
+        icon: 'heroicons_outline:chat',
+        link: '/apps/dash-board/contact'
     }
     
 ];

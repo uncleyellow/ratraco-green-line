@@ -9,15 +9,55 @@
 
     <!-- Contact Form -->
     <div class="relative z-10 bg-white p-8 shadow-2xl rounded-2xl w-full max-w-lg">
-        <h2 class="text-xl font-bold text-gray-700 text-center">✉ Liên hệ với chúng tôi</h2>
-        <p class="text-sm text-gray-500 text-center">Our representatives will get in touch with you soon!</p>
+        <h2 class="text-xl font-bold text-gray-700 text-center">✉ {{'contact-us' | transloco}}</h2>
+        <p class="text-sm text-gray-500 text-center">{{'contact-us-descriptions' | transloco}}</p>
         
-        <form class="mt-4 space-y-4">
-            <input type="text" placeholder="Tên" class="w-full p-3 border rounded-lg">
-            <input type="text" placeholder="Họ" class="w-full p-3 border rounded-lg">
-            <input type="tel" placeholder="Số điện thoại" class="w-full p-3 border rounded-lg">
-            <textarea placeholder="Ghi chú" class="w-full p-3 border rounded-lg"></textarea>
-            <button class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">Gửi</button>
-        </form>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="mt-4 space-y-4">
+            <input
+              type="text"
+              [placeholder]="'name' | transloco"
+              class="w-full p-3 border rounded-lg"
+              formControlName="fullName"
+            />
+            <div *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched" class="text-red-500">
+              {{'name-erorr' | transloco}}
+            </div>
+          
+            <!-- <input
+              type="tel"
+              placeholder="Số điện thoại"
+              class="w-full p-3 border rounded-lg"
+              formControlName="phone"
+            />
+            <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="text-red-500">
+              Số điện thoại không hợp lệ.
+            </div> -->
+
+            <input
+            type="tel"
+            [placeholder]="'email' | transloco"
+            class="w-full p-3 border rounded-lg"
+            formControlName="email"
+          />
+          <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-red-500">
+            {{'email-erorr' | transloco}}
+          </div>
+        
+          
+            <textarea
+            [placeholder]="'note' | transloco"
+              class="w-full p-3 border rounded-lg"
+              formControlName="message"
+            ></textarea>
+          
+            <button
+              type="submit"
+              class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition"
+              [disabled]="contactForm.invalid"
+            >
+              {{'send' | transloco}}
+            </button>
+          </form>
+          
     </div>
 </div>

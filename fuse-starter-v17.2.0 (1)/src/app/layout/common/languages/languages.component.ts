@@ -36,7 +36,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
      */
     ngOnInit(): void
     {
-        debugger
+        
         // Get the available languages from transloco
         // this.availableLangs = this._translocoService.getAvailableLangs();
         this.availableLangs =[

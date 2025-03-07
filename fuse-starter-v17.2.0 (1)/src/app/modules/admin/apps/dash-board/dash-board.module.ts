@@ -11,6 +11,9 @@ import { ContactComponent } from './contact/contact.component';
 import { IntroduceComponent } from './introduce/introduce.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ContactUsFormComponent } from './contact-us-form/contact-us-form.component';
+import { TranslocoModule } from '@ngneat/transloco';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { ContactUsFormComponent } from './contact-us-form/contact-us-form.compon
     MaterialModule,
     NgApexchartsModule, // Thêm module này vào
     
-
+    TranslocoModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule 
   ],
 })
 export class DashBoardModule { }

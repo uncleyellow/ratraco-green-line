@@ -4,23 +4,23 @@
         <div class="grid grid-cols-5 gap-6 justify-center items-center text-center pb-6"> 
             <div class="border-r last:border-r-0 pr-4 h-full">
                 <h2 class="text-3xl font-bold text-green-500">135+</h2>
-                <p class="text-gray-600">Container</p>
+                <p class="text-gray-600">{{ 'Container' | transloco}}</p>
             </div>
             <div class="border-r last:border-r-0 pr-4 h-full">
                 <h2 class="text-3xl font-bold text-blue-500">230+</h2>
-                <p class="text-gray-600">Khách hàng</p>
+                <p class="text-gray-600">{{ 'Client' | transloco}}</p>
             </div>
             <div class="border-r last:border-r-0 pr-4 h-full">
                 <h2 class="text-3xl font-bold text-yellow-500">6</h2>
-                <p class="text-gray-600">Đối tác</p>
+                <p class="text-gray-600">{{ 'Partner' | transloco}}</p>
             </div>
             <div class="border-r last:border-r-0 pr-4 h-full">
                 <h2 class="text-3xl font-bold text-red-500">30%</h2>
-                <p class="text-gray-600">Tuyển dụng</p>
+                <p class="text-gray-600">{{ 'Hire' | transloco}}</p>
             </div>
             <div class="pr-4 h-full">
                 <h2 class="text-3xl font-bold text-purple-500">24/7</h2>
-                <p class="text-gray-600">Hỗ trợ</p>
+                <p class="text-gray-600">{{ 'Support' | transloco}}</p>
             </div>
         </div>
     </div>
@@ -40,14 +40,10 @@
     </div>
     <div class="text-center md:text-left">
         <h2 class="text-3xl font-extrabold text-red-600 mb-4 flex items-center gap-2">
-            <mat-icon style="color: red;">groups</mat-icon> Chúng tôi là ai
+            <mat-icon style="color: red;">groups</mat-icon> {{'who-we-are' | transloco}}
         </h2>
         <p class="text-gray-700 text-lg leading-relaxed">
-            Green Line Logistics is more than a carrier – we're a team of dedicated 
-            professionals passionate about delivering excellence in every mile we cover. 
-            With years of industry experience, we’ve honed our expertise to offer a 
-            comprehensive range of logistics solutions tailored to meet the unique needs 
-            of our clients.
+            {{'description-who-we-are' | transloco}}
         </p>
     </div>
 </div>
@@ -58,15 +54,12 @@
         <h2 class="text-3xl font-extrabold text-gradient mb-4 flex items-center gap-2">
             <mat-icon class="text-orange-500 animate-wiggle">flag</mat-icon>
             <span class="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                Nhiệm vụ của chúng tôi
+                {{'our-mission' | transloco}}
             </span> 
         </h2>
         
         <p class="text-gray-700 text-lg leading-relaxed">
-            Driven by a mission to redefine logistics, our goal is to provide efficient, 
-            sustainable, and cost-effective transportation services. We strive to be a catalyst 
-            for your success by ensuring your goods reach their destination safely, on time, and 
-            in the most environmentally friendly manner possible.
+            {{'description-our-mission' | transloco}}
         </p>
     </div>
     <div class="relative">

@@ -3,32 +3,26 @@
     <div class="relative flex justify-center items-center w-full">
         <!-- Video nền -->
         <div class="relative top-0 left-0 w-screen h-screen overflow-hidden">
-            <iframe 
-                class="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/56UTyshRoXA?autoplay=1&loop=1&mute=1&playlist=56UTyshRoXA" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media; fullscreen" 
-                allowfullscreen>
-            </iframe>
+            <video 
+                class="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
+                autoplay 
+                loop 
+                muted
+                playsinline>
+                <source src="assets/videos/GreenlineLogistics.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
         </div>
+        
         
         
     
     
     
         <!-- Lớp phủ làm mờ video -->
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <!-- <div class="absolute inset-0 bg-black opacity-50"></div> -->
     
-        <!-- Nội dung: Logo + Chữ "Green Line" -->
-        <div class="absolute flex items-center space-x-4">
-            <!-- Logo -->
-            <img src="/assets/green-line/logo.svg" alt="Green Line Logo" class="h-16 w-auto">
-            
-            <!-- Chữ Green Line -->
-            <!-- <span class="text-green-500 text-4xl font-bold">
-                Green Line
-            </span> -->
-        </div>
+
     </div>
     
     

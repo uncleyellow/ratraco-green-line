@@ -1,22 +1,36 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 
+
+interface News {
+  id: string;
+  imageUrl: string;
+  title: string;
+  shortContent: string;
+  fullContent: string;
+  createdAt: string;
+}
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.scss']
 })
-export class NewsComponent {
+export class NewsComponent implements OnInit{
   partners = [
-    { name: 'Uber Freight', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'ECHO', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'KERRY', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'CQC', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'C.H. ROBINSON', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'ARRIVE LOGISTICS', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'RXO', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'Sherwin-Williams', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' },
-    { name: 'Lineage', image: 'https://banner2.cleanpng.com/20180409/qzw/avg8avh1i.webp' }
-  ];
+    { name: 'TOYOTA', image: 'https://logos-world.net/wp-content/uploads/2020/04/Toyota-Logo.png' },
+    { name: 'HYUNDAI', image: 'https://hyundaiankhanh.vn/wp-content/uploads/2022/09/y-nghia-logo-hyundai.jpg' },
+    { name: 'LEXUS', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvdnpaHwz28vdlLf-L14FxrDRyhad-dLKHeQ&s' },
+    { name: 'MITSUBISHI', image: 'https://banner2.cleanpng.com/20180802/tis/93ab2819be4d519df77ba9e99d998e02.webp' },
+    { name: 'HONDA', image: 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Honda_Logo.svg' },
+    { name: 'KIA', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3jE-rSCC1tz9wmA7vH9GnAxhSvRwAt_tS3A&s' },
+    { name: 'PORSCHE', image: 'https://banner2.cleanpng.com/20180616/tfg/aa6hgdjs5.webp' },
+    { name: 'SHARP', image: 'https://banner2.cleanpng.com/20180527/pli/avqya0slo.webp' },
+    { name: 'ISUZU', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpVcoU-SAXSbSi9jmBo3KJw7O2Ew2-6EpO_w&s' },
+    { name: 'YAMAHA', image: 'https://banner2.cleanpng.com/20180426/xqw/aveyo53j8.webp' },
+    { name: 'MITSUBA', image: 'https://media.licdn.com/dms/image/v2/C4E0BAQHKVGccRZS2Jw/company-logo_200_200/company-logo_200_200/0/1631324389777?e=2147483647&v=beta&t=1GFW6LOHayN_z3VwRaY3Z_PuXLIbS_4Qa5irGtGVK3U' }
+];
+
+  
 
   feedbacks = [
     { text: "Green Line Logistics has proven to be flexible and dependable, constantly delivering exceptional transportation solutions.", author: "Julian Lambert", company: "Pacific Tech" },
@@ -28,32 +42,39 @@ export class NewsComponent {
     { text: "Green Line Logistics has been a partner we can truly trust for reliable and consistent service.", author: "Nathan Wright", company: "Arrive Logistics" },
   ];
 
-  newsList = [
-    {
-      title: 'Innovative Transport Solutions',
-      description: 'Discover how Green Line Logistics is revolutionizing freight transportation with cutting-edge solutions.',
-      fullContent: 'Green Line Logistics is leveraging advanced AI-powered logistics and IoT solutions to enhance real-time tracking and predictive analytics, ensuring efficiency across the entire supply chain.',
-      image: 'assets/images/news/news1.jpg'
-    },
-    {
-      title: 'Supply Chain Efficiency',
-      description: 'Learn how to optimize your supply chain with advanced logistics strategies from industry experts.',
-      fullContent: 'By utilizing smart routing algorithms and blockchain technology, businesses can streamline operations, reduce delays, and enhance transparency in supply chain management.',
-      image: 'assets/images/news/news2.jpg'
-    },
-    {
-      title: 'Sustainable Logistics',
-      description: 'Green Line Logistics is committed to reducing carbon emissions with eco-friendly transport methods.',
-      fullContent: 'The adoption of electric trucks, optimized route planning, and renewable energy sources is helping companies minimize their carbon footprint while maintaining efficiency.',
-      image: 'assets/images/news/news3.jpg'
-    }
-  ];
 
   expandedNewsIndex: number | null = null;
-  
+  newsList: News[] = [];
   currentIndex = 0;
-  itemsPerPage = 3;
+  itemsPerPage = 6;
+constructor(
+  private http: HttpClient
+){
 
+}
+ngOnInit() {
+  this.getNews();
+}
+
+getNews() {
+  this.http.get<News[]>('http://localhost:3000/api/news').subscribe(
+    (data) => {
+      // Chỉnh sửa imageUrl để hiển thị ảnh hợp lệ nếu dữ liệu không phải URL
+      this.newsList = data.map(news => ({
+        ...news,
+        imageUrl: this.isValidUrl(news.imageUrl) ? news.imageUrl : 'https://via.placeholder.com/300'
+      }));
+    },
+    (error) => {
+      console.error('Lỗi khi lấy dữ liệu tin tức:', error);
+    }
+  );
+}
+
+
+isValidUrl(url: string): boolean {
+  return url.startsWith('http://') || url.startsWith('https://');
+}
   get pagedFeedbacks() {
     return this.feedbacks.slice(this.currentIndex, this.currentIndex + this.itemsPerPage);
   }
@@ -72,5 +93,19 @@ export class NewsComponent {
 
   toggleExpand(index: number) {
     this.expandedNewsIndex = this.expandedNewsIndex === index ? null : index;
+  }
+
+  startIndex = 0;
+
+  next() {
+    if (this.startIndex + this.itemsPerPage < this.partners.length) {
+      this.startIndex += this.itemsPerPage;
+    }
+  }
+
+  prev() {
+    if (this.startIndex > 0) {
+      this.startIndex -= this.itemsPerPage;
+    }
   }
 }
