@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-contact-us-form',
@@ -41,12 +41,24 @@ onSubmit() {
 
   this.http.post('http://localhost:3000/api/contact', formData).subscribe({
     next: (res) => {
-      alert('Gửi thành công!');
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+      });
       this.contactForm.reset();
       this.loading = false;
     },
     error: (err) => {
-      alert('Lỗi gửi dữ liệu!');
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Something went wrong!",
+        showConfirmButton: false,
+        timer: 1500
+      });
       console.error(err);
       this.loading = false;
     },

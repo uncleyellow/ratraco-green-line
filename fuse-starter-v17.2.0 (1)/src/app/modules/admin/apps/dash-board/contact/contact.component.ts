@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -36,12 +36,24 @@ export class ContactComponent {
   
     this.http.post('http://localhost:3000/api/contact', formData).subscribe({
       next: (res) => {
-        alert('Gửi thành công!');
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500
+        });
         this.contactForm.reset();
         this.loading = false;
       },
       error: (err) => {
-        alert('Lỗi gửi dữ liệu!');
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "Something went wrong!",
+          showConfirmButton: false,
+          timer: 1500
+        });
         console.error(err);
         this.loading = false;
       },
