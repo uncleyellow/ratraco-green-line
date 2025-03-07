@@ -44,7 +44,13 @@
         "solutions": "ソリューション",
         "news": "ニュース",
         "hire": "採用情報",
-        "contact": "お問い合わせ"
+        "contact": "お問い合わせ",
     
-    
+        "footer": "すべての権利を保有。Greenline Logistics。",
+        "About": "会社概要",
+        "Locations": "所在地",
+        "Services": "サービス",
+        "Partners": "パートナー",
+        "Terms-and-Conditions": "利用規約",
+        "Privacy-Policy": "プライバシーポリシー"
 }

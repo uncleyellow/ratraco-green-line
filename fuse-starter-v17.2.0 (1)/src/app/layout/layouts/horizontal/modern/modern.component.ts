@@ -59,9 +59,7 @@ export class ModernLayoutComponent implements OnInit, OnDestroy
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((navigation: Navigation) => {
                 this.navigation = navigation;
-    
-                 // Dịch dữ liệu sau khi nhận được navigation
-                 this.translateNavigation(this.navigation);
+
             });
 
         // Subscribe to media changes
@@ -74,18 +72,7 @@ export class ModernLayoutComponent implements OnInit, OnDestroy
             });
     }
 
-    translateNavigation(navigation: any): void {
-        debugger
-        Object.keys(navigation).forEach((key) => {
-            if (Array.isArray(navigation[key])) {
-                navigation[key] = navigation[key].map((item: any) => ({
-                    ...item,
-                    title: this._translocoService.translate(item.title) // Dịch title từ Transloco
-                }));
-            }
-        });
-    }
-    
+
     
     /**
      * On destroy

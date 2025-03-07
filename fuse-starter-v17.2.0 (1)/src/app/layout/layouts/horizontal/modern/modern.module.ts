@@ -17,6 +17,7 @@ import { ShortcutsModule } from 'app/layout/common/shortcuts/shortcuts.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/modern.component';
+import { TranslocoModule } from '@ngneat/transloco';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,9 @@ import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/mode
         SearchModule,
         ShortcutsModule,
         UserModule,
-        SharedModule
+        SharedModule,
+        TranslocoModule,
+
     ],
     exports     : [
         ModernLayoutComponent

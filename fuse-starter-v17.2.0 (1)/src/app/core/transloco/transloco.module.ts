@@ -18,11 +18,11 @@ import { TranslocoHttpLoader } from 'app/core/transloco/transloco.http-loader';
                     },
                     {
                         id   : 'tr',
-                        label: 'Turkish'
+                        label: 'Việt Nam'
                     }
                 ],
-                defaultLang         : 'en',
-                fallbackLang        : 'en',
+                defaultLang         : 'tr',
+                fallbackLang        : 'tr',
                 reRenderOnLangChange: true,
                 prodMode            : true
             })

@@ -41,7 +41,7 @@ export class LanguagesComponent implements OnInit, OnDestroy
         // this.availableLangs = this._translocoService.getAvailableLangs();
         this.availableLangs =[
             {id: 'en', label: 'English'},
-            {id: 'tr', label: 'Turkish'},
+            {id: 'tr', label: 'Việt Nam'},
             {id: 'jb', label: 'Japan'},
         ]
         // Subscribe to language changes
