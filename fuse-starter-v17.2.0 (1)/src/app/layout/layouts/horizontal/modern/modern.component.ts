@@ -14,6 +14,10 @@ import { TranslocoService } from '@ngneat/transloco';
 })
 export class ModernLayoutComponent implements OnInit, OnDestroy
 {
+    translatedTitles: string[] = [];
+    translatedNavigation: any = null; // 🔹 Thêm thuộc tính này
+
+    translate
     isScreenSmall: boolean;
     navigation: Navigation;
     private _unsubscribeAll: Subject<any> = new Subject<any>();
@@ -59,7 +63,6 @@ export class ModernLayoutComponent implements OnInit, OnDestroy
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((navigation: Navigation) => {
                 this.navigation = navigation;
-
             });
 
         // Subscribe to media changes
@@ -70,6 +73,8 @@ export class ModernLayoutComponent implements OnInit, OnDestroy
                 // Check if the screen is small
                 this.isScreenSmall = !matchingAliases.includes('md');
             });
+
+
     }
 
 
@@ -104,4 +109,11 @@ export class ModernLayoutComponent implements OnInit, OnDestroy
             navigation.toggle();
         }
     }
+
+
+
+
+
+
+    
 }
