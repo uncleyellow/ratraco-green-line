@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from '.../../environments/environment.prod'; // Nếu file cách xa
 
 
 interface News {
@@ -57,7 +58,7 @@ ngOnInit() {
 }
 
 getNews() {
-  this.http.get<News[]>('http://localhost:3000/api/news').subscribe(
+  this.http.get<News[]>(`${environment.apiUrl}/news`).subscribe(
     (data) => {
       // Chỉnh sửa imageUrl để hiển thị ảnh hợp lệ nếu dữ liệu không phải URL
       this.newsList = data.map(news => ({
