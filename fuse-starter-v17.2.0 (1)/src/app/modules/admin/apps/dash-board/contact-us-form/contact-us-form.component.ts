@@ -3,6 +3,7 @@ import { Component, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import Swal from 'sweetalert2'
+import { environment } from '.../../environments/environment.prod'; // Nếu file cách xa
 
 @Component({
   selector: 'app-contact-us-form',
@@ -38,8 +39,7 @@ onSubmit() {
     ...this.contactForm.value,
     createdAt: new Date().toISOString(),
   };
-
-  this.http.post('http://localhost:3000/api/contact', formData).subscribe({
+  this.http.post(`${environment.apiUrl}/contact`, formData).subscribe({
     next: (res) => {
       Swal.fire({
         position: "top-end",
