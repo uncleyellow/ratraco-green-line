@@ -38,6 +38,8 @@
                             "src/favicon-16x16.png",
                             "src/favicon-32x32.png",
                             "src/assets",
+                            "src/assets/videos/GreenlineLogistics.mp4",
+                            "src/assets/green-line/logo.svg",
                             {
                                 "glob": "_redirects",
                                 "input": "src",
