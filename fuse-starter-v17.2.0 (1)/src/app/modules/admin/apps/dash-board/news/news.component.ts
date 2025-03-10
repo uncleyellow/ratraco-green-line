@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { environment } from '.../../environments/environment.prod'; // Nếu file cách xa
+import { environment } from 'environments/environment.prod'; // Nếu file cách xa
 
 
 interface News {

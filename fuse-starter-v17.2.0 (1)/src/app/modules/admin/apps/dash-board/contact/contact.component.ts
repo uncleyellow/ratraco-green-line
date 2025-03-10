@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'
-import { environment } from '.../../environments/environment.prod'; // Nếu file cách xa
+import { environment } from 'environments/environment.prod'; // Nếu file cách xa
 
 @Component({
   selector: 'app-contact',
